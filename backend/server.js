@@ -5,7 +5,7 @@ const mongoClient=require('mongodb').MongoClient;
 const student=require('./APIs/student');
 const teacher=require('./APIs/teacher')
 const cors=require('cors')
-const dbUrl='mongodb+srv://21501a0580:bharath+8510@cluster0.sxwaaj9.mongodb.net/';
+const dbUrl='mongodb+srv://21501a0580:bharath+8510@cluster0.sxwaaj9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const cron = require('node-cron');
 
 app.use(express.static(path.join(__dirname,'../frontend/build')))
