@@ -11,7 +11,7 @@ const cron = require('node-cron');
 app.use(express.static(path.join(__dirname,'../frontend/build')))
 app.use(cors());
 mongoClient.connect(dbUrl).then(client=>{
-    const dbObj=client.db('institute');
+    const dbObj=client.db('institute').then(console.log("Connected to DataBase.");
     const studentsCollection=dbObj.collection("students");
     const teachersCollection=dbObj.collection("teachers");
     const sectionsCollection=dbObj.collection("sections")
